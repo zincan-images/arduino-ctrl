@@ -1,16 +1,16 @@
 #! /usr/bin/python3
 
-light-status == False
-hold-time == 0
-flash-time == 0
+import time
 
-hold-time = int(input('Input sleep timer as seconds: ')
-flash-time = int(input('Input flash count: ')
+lightStatus = False
+holdTime = 0
+flashTime = 0
 
-for light-status in range(0, flash-time):
-	lisght-status = False
-	time.sleep(hold-time)
-	light-status = True
-	print(str(light-status))
+holdTime = float(input('Input sleep timer as seconds: '))
+flashTime = int(input('Input flash count: '))
 
-
+for lightStatus in range(0, flashTime):
+    lisghtStatus = False
+    time.sleep(holdTime)
+    lightStatus = True
+    print(str(lightStatus))
