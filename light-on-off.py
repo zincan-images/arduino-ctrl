@@ -23,8 +23,10 @@ def light_work(HT, FT):
         lightStatus = True
         print(f"{lightStatus}")
 
+# imort from linux command line
 HT = float(sys.argv[1])
 FT = int(sys.argv[2])
 
+# run 
 light_work(HT, FT)
 
