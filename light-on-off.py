@@ -1,16 +1,30 @@
 #! /usr/bin/python3
+# SPDA-CopyrightWritingd: zincan images
 
+import sys
 import time
 
+print('hello')
+
+# initialization
 lightStatus = False
 holdTime = 0
 flashTime = 0
 
-holdTime = float(input('Input sleep timer as seconds: '))
-flashTime = int(input('Input flash count: '))
+# inout values
+# holdTime = float(input('Input sleep timer as seconds: ')) # turn off times
+# flashTime = int(input('Input flash count: ')) # turn on times
 
-for lightStatus in range(0, flashTime):
-    lisghtStatus = False
-    time.sleep(holdTime)
-    lightStatus = True
-    print(str(lightStatus))
+# running
+def light_work(HT, FT):
+    for lightStatus in range(0, FT):
+        lightStatus = False
+        time.sleep(HT)
+        lightStatus = True
+        print(f"{lightStatus}")
+
+HT = float(sys.argv[1])
+FT = int(sys.argv[2])
+
+light_work(HT, FT)
+
