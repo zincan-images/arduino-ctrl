@@ -4,7 +4,7 @@
 import sys
 import time
 
-print('hello')
+print('hello\n Start working')
 
 # initialization
 lightStatus = False
@@ -17,6 +17,7 @@ flashTime = 0
 
 # running
 def light_work(HT, FT):
+    print(f'Hold Time: {HT} Flash Time: {FT}')
     for lightStatus in range(0, FT):
         lightStatus = False
         time.sleep(HT)
